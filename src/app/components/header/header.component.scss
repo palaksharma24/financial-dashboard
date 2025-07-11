@@ -1,0 +1,40 @@
+@use '@assets/styles/variables.scss' as *;
+
+.toolbar-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nav-items {
+  display: flex;
+  gap: 8px;
+}
+
+.nav-button {
+  border-radius: 4px;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 8px;
+}
+
+.user-section {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.settings-icon {
+  color: $app-icon-help-color;
+}
+
+.icon-white {
+  color: $app-text-color-white;
+}
+
+.account-name {
+  font-weight: 500;
+  font-size: 15px;
+}

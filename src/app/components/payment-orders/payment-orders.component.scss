@@ -1,0 +1,85 @@
+@use '@assets/styles/variables.scss' as *;
+
+.payment-orders-card {
+    margin-bottom: 24px;
+    border-radius: 0;
+    background: $app-background-color;
+    box-shadow: none;
+}
+
+.accounts-header {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.material-symbols-outlined {
+    font-size: 42px;
+    color: $app-primary-color;
+    border: $app-primary-color 2px solid;
+    border-radius: 50%;
+    padding: 6px;
+}
+
+.section-title {
+    font-size: 20px;
+    color: $app-text-color;
+}
+
+.orders-tabs {
+    margin-top: 16px;
+}
+
+.tab-content {
+    padding: 16px 0;
+}
+
+.orders-table th {
+    background: $app-primary-color;
+    color: $app-text-color-white;
+    font-weight: 500;
+}
+
+.orders-table td {
+    padding: 16px;
+    border-bottom: 1px solid $app-light-border-color;
+    background-color: $app-background-color;
+}
+
+.orders-table tr:last-child td {
+    border-bottom: none;
+}
+
+.order-number {
+    font-weight: 500;
+    color: $app-primary-color;
+}
+
+
+.status {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 15px;
+    color: $app-text-color;
+}
+
+.status-icon {
+    color: $app-primary-color;
+}
+
+.no-orders {
+    text-align: center;
+    color: $app-text-color;
+    padding: 40px;
+}
+
+.orders-actions {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 16px;
+}
+
+.create-order-btn {
+    border-radius: 0;
+}

@@ -1,0 +1,55 @@
+@use '@assets/styles/variables.scss' as *;
+
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    background-color: $app-background-color;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    width: 100%;
+    padding: 34px;
+}
+
+.company-title {
+    color: $app-text-color;
+    font-size: 32px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.create-pay-button {
+    display: flex;
+    justify-content: end;
+}
+
+.create-order-btn {
+    font-size: 15px;
+    border-radius: 0;
+}
+
+.info-layout {
+    display: flex;
+    gap: 44px;
+    margin: 32px 0;
+    flex-wrap: wrap;
+}
+
+.accounts,
+.quick-pay {
+    display: flex;
+    flex: 1 1 0; 
+    flex-direction: column;
+}
+
+.accounts {
+    margin-top: 40px;
+}

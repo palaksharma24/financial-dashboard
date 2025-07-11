@@ -1,0 +1,52 @@
+<div class="stats-container" *ngIf="stats">
+  <div class="stats-row">
+    <div class="stat-item">
+      <div class="stat-label">Pending Approval:</div>
+      <div class="stat-values">
+        <span class="stat-value attention-required">{{stats.pendingApprovalOrders}} Order(s)</span>
+        <span class="stat-value attention-required">{{stats.pendingApprovalTransfers}} Transfer(s)</span>
+      </div>
+    </div>
+
+    <div class="stat-item">
+      <div class="stat-label">Attention Required:</div>
+      <div class="stat-values">
+        <span class="stat-value attention-required">{{stats.attentionRequiredOrders}} Order(s)</span>
+      </div>
+    </div>
+
+    <div class="stat-item">
+      <div class="stat-label">Scheduled Payments:</div>
+      <div class="stat-values">
+        <span class="stat-value currency">{{stats.scheduledPaymentsCAD | currency}}  <img alt="Canada" width="18"
+            src="http://purecatamphetamine.github.io/country-flag-icons/3x2/CA.svg" /></span>
+        <span class="stat-value currency">{{stats.scheduledPaymentsUSD | currency}} <img alt="United States" width="18"
+            src="http://purecatamphetamine.github.io/country-flag-icons/3x2/US.svg" /></span>
+      </div>
+    </div>
+
+    <div class="stat-item">
+      <div class="stat-label">Next Scheduled Payment Date:</div>
+      <div class="stat-values">
+        <span class="stat-value">{{stats.nextScheduledPaymentDate}}</span>
+      </div>
+    </div>
+
+    <div class="stat-item">
+      <div class="stat-label">Completed This Month:</div>
+      <div class="stat-values">
+        <span class="stat-value currency">{{stats.completedThisMonthCAD | currency }} <img alt="Canada" width="18"
+            src="http://purecatamphetamine.github.io/country-flag-icons/3x2/CA.svg" /></span>
+        <span class="stat-value currency">{{stats.completedThisMonthUSD | currency }} <img alt="United States" width="18"
+            src="http://purecatamphetamine.github.io/country-flag-icons/3x2/US.svg" /></span>
+      </div>
+    </div>
+
+    <div class="stat-item">
+      <button mat-icon-button class="nav-button">
+        <span class="material-symbols-outlined">
+          expand_circle_right
+        </span> </button>
+    </div>
+  </div>
+</div>

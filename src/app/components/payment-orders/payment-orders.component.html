@@ -1,0 +1,91 @@
+<mat-card class="payment-orders-card">
+    <mat-card-header>
+        <mat-card-title class="accounts-header">
+            <span class="material-symbols-outlined">
+                content_paste
+            </span>
+            <span class="section-title">Payment Orders</span>
+        </mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+        <mat-tab-group class="orders-tabs">
+            <mat-tab>
+                <ng-template mat-tab-label>
+                    In Progress ({{ orderLength }})
+                </ng-template>
+                <div class="tab-content">
+                    <table mat-table [dataSource]="dataSource" class="orders-table">
+                        <ng-container matColumnDef="orderNumber">
+                            <th mat-header-cell *matHeaderCellDef>Order #</th>
+                            <td mat-cell *matCellDef="let order" class="order-number">
+                                {{order.orderNumber}}
+                            </td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="processingDate">
+                            <th mat-header-cell *matHeaderCellDef>Processing Date</th>
+                            <td mat-cell *matCellDef="let order">
+                                {{order.processingDate | date}}
+                            </td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="status">
+                            <th mat-header-cell *matHeaderCellDef>Status</th>
+                            <td mat-cell *matCellDef="let order">
+                                <span class="status">
+                                    <mat-icon class="status-icon">settings</mat-icon>
+                                    {{ order.status }}
+                                </span>
+                            </td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="amount">
+                            <th mat-header-cell *matHeaderCellDef>Amount</th>
+                            <td mat-cell *matCellDef="let order">
+                                {{order.amount | currency}}
+                            </td>
+                        </ng-container>
+
+                        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                    </table>
+                </div>
+            </mat-tab>
+
+            <mat-tab>
+                <ng-template mat-tab-label>
+                    Scheduled ({{ orderLength }})
+                </ng-template>
+                <div class="tab-content">
+                    <p class="no-orders">No scheduled orders</p>
+                </div>
+            </mat-tab>
+
+            <mat-tab>
+                <ng-template mat-tab-label>
+                    Pending Approval ({{ orderLength }})
+                </ng-template>
+                <div class="tab-content">
+                    <p class="no-orders">No orders pending approval</p>
+                </div>
+            </mat-tab>
+
+            <mat-tab>
+                <ng-template mat-tab-label>
+                    Draft ({{ orderLength }})
+                </ng-template>
+                <div class="tab-content">
+                    <p class="no-orders">No draft orders</p>
+                </div>
+            </mat-tab>
+        </mat-tab-group>
+
+        <div class="orders-actions">
+            <button mat-button>View All Orders</button>
+            <button mat-flat-button  class="create-order-btn">
+                Create Payment Order
+            </button>
+        </div>
+    </mat-card-content>
+</mat-card>

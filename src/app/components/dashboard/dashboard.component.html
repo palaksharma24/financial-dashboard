@@ -1,0 +1,23 @@
+<div class="dashboard-container">
+    <app-header></app-header>
+    <app-dashboard-stats></app-dashboard-stats>
+    <div class="main-container">
+        <main class="main-content">
+            <h1 class="company-title">{{companyName}}</h1>
+            <section class="create-pay-button">
+                <button mat-flat-button class="create-order-btn">
+                    Create Payment Order
+                </button>
+            </section>
+            <section class="info-layout">
+                <div class="accounts">
+                    <app-accounts></app-accounts>
+                </div>
+                <div class="quick-pay">
+                    <app-quick-pay></app-quick-pay>
+                </div>
+            </section>
+            <app-payment-orders></app-payment-orders>
+        </main>
+    </div>
+</div>

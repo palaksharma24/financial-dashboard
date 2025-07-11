@@ -1,0 +1,58 @@
+@use '@assets/styles/variables.scss' as *;
+
+.stats-container {
+  background: $app-secondary-color;
+  padding: 24px;
+}
+
+.stats-row {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.stat-item {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.stat-label {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.stat-values {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stat-value {
+  font-size: 15px;
+  color: $app-light-text-color
+}
+
+.attention-required {
+  color: $app-warning-color;
+  font-weight: 500;
+}
+
+.nav-button {
+  color: $app-primary-color;
+  margin: auto;
+}
+
+.material-symbols-outlined {
+  font-size: 32px;
+  transform: scaleX(-1);
+}
+
+.currency {
+  display: flex;
+  gap: 8px;
+  margin-left: auto;
+  padding: 0 30px;
+}
